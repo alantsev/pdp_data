@@ -1,0 +1,5 @@
+pipeline:
+  name: cd_legacy_baseline
+  version: 1.0
+  steps: []
+

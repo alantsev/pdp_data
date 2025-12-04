@@ -1,0 +1,11 @@
+project:
+  id: project2
+  language: java
+  pipeline_id: legacy_baseline
+  repository: git@github.com:org/project2.git
+  tags: []
+  scripts:
+    sast: ./scripts/my_run_sast.sh
+    build: ./scripts/my_run_build.sh
+    test: ./scripts/my_run_test.sh
+

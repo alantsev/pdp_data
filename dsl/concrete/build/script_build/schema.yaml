@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema#
+implements: build:compile
+allOf:
+- $ref: ../../base_concrete_step.yaml
+- properties:
+    type:
+      const: build:script_build
+    config:
+      type: object
+      required:
+      - script
+      properties:
+        script:
+          type: string
+

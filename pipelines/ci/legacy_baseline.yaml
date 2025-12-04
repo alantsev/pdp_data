@@ -1,0 +1,40 @@
+pipeline:
+  name: ci_legacy_baseline
+  version: 1.0
+
+  steps:
+    - id: checkout
+      step_class: abstract
+      type: source:get_code
+      blocking: true
+
+    - id: sast_scan
+      step_class: abstract
+      type: security:sast
+      depends_on: [checkout]
+      blocking: policy
+
+    - id: sast_check
+      step_class: abstract
+      type: security:check_sast
+      depends_on: [sast_scan]
+      blocking: policy
+
+    - id: build
+      step_class: abstract
+      type: build:compile
+      depends_on: [checkout]
+      blocking: true
+
+    - id: unit_test
+      step_class: abstract
+      type: test:unit
+      depends_on: [build]
+      blocking: policy
+
+    - id: unit_test_check
+      step_class: abstract
+      type: test:check_unit
+      depends_on: [unit_test]
+      blocking: policy
+

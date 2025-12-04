@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+required: [id, step_class, type, blocking]
+properties:
+  id:
+    type: string
+  step_class:
+    const: abstract
+  type:
+    type: string
+  depends_on:
+    type: array
+    items:
+      type: string
+  blocking:
+    enum: [true, false, "policy"]
+

@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema#
+implements: security:sast
+allOf:
+- $ref: ../../base_concrete_step.yaml
+- properties:
+    type:
+      const: security:script_sast
+    config:
+      type: object
+      required:
+      - script
+      properties:
+        script:
+          type: string
+

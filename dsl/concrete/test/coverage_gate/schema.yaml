@@ -1,0 +1,17 @@
+$schema: http://json-schema.org/draft-07/schema#
+implements: test:check_unit
+allOf:
+- $ref: ../../base_concrete_step.yaml
+- properties:
+    type:
+      const: test:coverage_gate
+    config:
+      type: object
+      required:
+      - min_coverage
+      properties:
+        min_coverage:
+          type: integer
+          minimum: 0
+          maximum: 100
+

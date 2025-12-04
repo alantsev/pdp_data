@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema#
+implements: source:get_code
+allOf:
+- $ref: ../../base_concrete_step.yaml
+- properties:
+    type:
+      const: source:git_clone
+    config:
+      type: object
+      required:
+      - repository
+      properties:
+        repository:
+          type: string
+

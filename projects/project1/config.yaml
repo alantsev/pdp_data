@@ -1,0 +1,8 @@
+project:
+  id: project1
+  language: java
+  pipeline_id: legacy_baseline
+  repository: git@github.com:org/project1.git
+  tags:
+  - no_sast
+

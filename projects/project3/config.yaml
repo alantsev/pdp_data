@@ -1,0 +1,7 @@
+project:
+  id: project3
+  language: python
+  pipeline_id: legacy_baseline
+  repository: git@github.com:org/project3.git
+  tags: []
+

@@ -1,0 +1,8 @@
+step:
+  id: {{ id }}
+  type: sast_gate
+  blocking: {{ blocking }}
+  action:
+    type: quality_gate
+    threshold: {{ config.threshold }}
+

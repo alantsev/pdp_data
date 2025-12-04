@@ -1,0 +1,5 @@
+pipeline:
+  name: iscan_css
+  version: 1.0
+  steps: []
+

@@ -1,0 +1,8 @@
+step:
+  id: {{ id }}
+  type: coverage_gate
+  blocking: {{ blocking }}
+  action:
+    type: quality_gate
+    min_coverage: {{ config.min_coverage }}
+

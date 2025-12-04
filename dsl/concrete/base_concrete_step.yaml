@@ -1,0 +1,23 @@
+$schema: http://json-schema.org/draft-07/schema#
+properties:
+  blocking:
+    type: boolean
+  config:
+    type: object
+  depends_on:
+    items:
+      type: string
+    type: array
+  id:
+    type: string
+  step_class:
+    const: concrete
+  type:
+    type: string
+required:
+- id
+- step_class
+- type
+- blocking
+type: object
+

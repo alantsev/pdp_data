@@ -1,0 +1,15 @@
+$schema: http://json-schema.org/draft-07/schema#
+implements: security:check_sast
+allOf:
+- $ref: ../../base_concrete_step.yaml
+- properties:
+    type:
+      const: security:sast_gate
+    config:
+      type: object
+      required:
+      - threshold
+      properties:
+        threshold:
+          type: string
+
